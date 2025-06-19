@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WH4T-T0-D0-APP!</title>
+    <title>Login | WH4T-T0-D0!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="to-do-app">
-            <h2>T0-D0 L!ST <img src="../files/icon.png" alt="img"></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button onclick="addTask()">Add</button>
+    <div class="loginPage">
+        <div class="loginBox">
+            <h2>User Login</h2>
+        <div class="user">
+            <div class="form-row">
+                <label for="userName">Username:</label>
+                <input type="text", id="userName" placeholder="Enter username">
             </div>
-            <ul id="list-container">
-               <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
+
+            <div class="form-row password-wrapper">
+                <label for="password"> Password :</label>
+                <input type="text", id="password" placeholder="Password">
+                <img src="../files/closed.jpg" id="togglePassword" class="eye-icon" onclick="togglePassword()">
+            </div>
+            <button id="login-button" onclick="info()">Login &#8594;</button>
+        </div>
         </div>
     </div>
     <script src="script.js"></script>

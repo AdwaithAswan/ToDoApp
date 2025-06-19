@@ -1,3 +1,33 @@
+// -- Login Page --
+const userName=document.getElementById("userName");
+const password=document.getElementById("password");
+
+function info(){
+    if(userName === '' || password === ''){
+        alert("Enter info to proceed")
+    }
+    else{
+        window.location.href = "homePage.html";
+    }
+}
+function togglePassword() {
+    const passwordInput = document.getElementById("password");
+    const eyeIcon = document.getElementById("togglePassword");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.src = "files/eye-open.png";
+    } else {
+        passwordInput.type = "password";
+        eyeIcon.src = "files/eye-closed.png";
+    }
+}
+
+// function saveInfo(){
+    
+// }
+
+// -- Main Page --
 const inputBox=document.getElementById("input-box");
 const listContainer=document.getElementById("list-container");
 
@@ -35,3 +65,4 @@ function showTask() {
     listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
